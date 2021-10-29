@@ -5,6 +5,7 @@
 **/
 
 const pg = require('pg');
+const Pool = pg.Pool;
 const url = require('url');
 let config = {
     database: 'prime_feedback',     // the name of the database
@@ -43,5 +44,7 @@ if (process.env.DATABASE_URL) {
         idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
     };
 }
+
+
 
 module.exports = new pg.Pool(config);
