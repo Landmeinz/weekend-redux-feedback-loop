@@ -6,7 +6,13 @@
 
 const pg = require('pg');
 const url = require('url');
-let config = {};
+let config = {
+    database: 'prime_feedback',     // the name of the database
+    host: 'localhost',              // where is your database
+    port: 5432,                     // the port number for your database, 5432 is the default
+    max: 10,                        // how many connections at one time
+    idleTimeoutMillis: 30000        // 30 seconds to try to connect
+};
 
 if (process.env.DATABASE_URL) {
     // Heroku gives a url, not a connection object
