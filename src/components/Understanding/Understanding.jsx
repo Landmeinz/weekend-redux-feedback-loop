@@ -9,7 +9,7 @@ function Understanding() {
 
 
     const handleSubmit = (event) => {
-        console.log('CLICK next in the feeling form');
+        console.log('CLICK next in the understanding form');
         event.preventDefault();
         setUnderstanding('');
     }
