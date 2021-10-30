@@ -3,17 +3,25 @@ import './Feeling.css'
 
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Feeling(){
 
-    const [feeling, setFeeling] = useState('');
+    const dispatch = useDispatch();
 
+    const [feeling, setFeeling] = useState('');
+    
 
     
     const handleSubmit = (event) => {
         console.log('CLICK next in the feeling form');
         event.preventDefault();
-        setFeeling('');
+
+        dispatch({
+            type:   'ADD_FEELING',
+            payload: feeling
+        })
+        // setFeeling('');
     }
 
 

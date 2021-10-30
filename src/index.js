@@ -10,15 +10,45 @@ import logger from 'redux-logger';
 
 // --- REDUCERS --- //
 
+const formData = {
+    feeling:        '',
+    understanding:  '',
+    support:        '',
+    comments:       ''
+}
+
+const formReducer = (state=formData, action) => {
+
+    if(action.payload === 'ADD_FEELING'){
+        return {...state, feeling: action.payload}
+    }
+    return state;
+
+    // switch (action.type) {
+    //     case 'ADD_FEELING':
+    //         return {...state, feeling: action.payload}
+    //         break;
+    
+    //     default:
+
+    //         break;
+    // }
+}
+
+const storeInstance = createStore(
+    combineReducers({
+        formReducer
+    }), 
+    applyMiddleware(logger)
+);
 
 
 
-
-// <Provider>
-// </Provider>
 
 ReactDOM.render(
-    <App />, 
+<Provider store={storeInstance}>
+    <App />
+</Provider>, 
 document.getElementById('root'));
 registerServiceWorker();
 

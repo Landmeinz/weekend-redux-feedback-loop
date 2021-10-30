@@ -20,7 +20,9 @@ function App() {
   // const dispatch = useDispatch();
 
 
-  // axios GET 
+
+  // axios GET for admin page
+
 
 
   return (
