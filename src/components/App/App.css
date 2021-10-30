@@ -1,23 +1,6 @@
-.App {
-  text-align: center;
-}
 
-.App-header {
-  background-color: #033076;
-  min-height: 70px;
-  padding: 20px;
-  color: white;
-  margin-bottom: 20px;
-}
+/* main container */
 
-.App-title {
-  font-size: 2em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-h4 {
-  font-style: italic;
+.app-container {
+  border: 1px solid red;
 }

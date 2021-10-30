@@ -1,0 +1,16 @@
+
+:root {
+    --color-background-main: hsla(217, 95%, 24%, .9);
+    --color-text-white:      hsla(220, 5%, 95%, .9);
+}
+
+.app-header {
+    background-color: var(--color-background-main);
+    min-height: 50px;
+    padding: 20px;
+    color: var(--color-text-white);
+    text-align: center;
+}
+.app-header h4 {
+    font-style: italic;
+}
