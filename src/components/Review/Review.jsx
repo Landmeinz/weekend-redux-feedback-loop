@@ -11,7 +11,7 @@ function Review() {
 
     const feedbackData = useSelector(store => store.formReducer);
 
-    const handleSubmit = () => {
+    const handleSubmitFeedback = () => {
         console.log('CLICK submit in the review page');
         axios({
             method: 'POST',
@@ -24,10 +24,7 @@ function Review() {
         .catch(error => {
             console.log('POST /feedback ERROR', error);
         })
-
-        dispatch({
-            type: 'CLEAR_ALL',
-        })
+        dispatch({type: 'CLEAR_ALL'});
     }
 
 
@@ -41,7 +38,7 @@ function Review() {
             <p>UNDERSTANDING: {feedbackData.understanding}</p>
             <p>SUPPORT: {feedbackData.support}</p>
             <p>COMMENTS: {feedbackData.comments}</p>
-            <button onClick={handleSubmit}>SUBMIT</button>
+            <button onClick={handleSubmitFeedback}>SUBMIT</button>
         </div>
     )
 };

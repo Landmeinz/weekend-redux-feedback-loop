@@ -21,7 +21,6 @@ router.get('/', (req, res) => {
     pool.query(queryText)
         .then(response => {
             console.log('router.GET response', response);
-            
             res.send(response.rows);
         })
         .catch(error => {
@@ -51,7 +50,7 @@ router.post('/', (req, res) => {
 
     pool.query(queryText, values)
         .then(result => {
-            console.log('router.POST response', response);
+            console.log('router.POST response', result);
             res.sendStatus(200);
         })
         .catch(error => {
