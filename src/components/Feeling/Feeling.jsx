@@ -10,30 +10,27 @@ function Feeling(){
     const dispatch = useDispatch();
 
     const [feeling, setFeeling] = useState('');
-    
 
     
     const handleSubmit = (event) => {
         console.log('CLICK next in the feeling form');
         event.preventDefault();
-
         dispatch({
             type:   'ADD_FEELING',
             payload: feeling
         })
-        // setFeeling('');
+        setFeeling('');
     }
 
 
-
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(event) => handleSubmit(event)}>
             <h3>How are you feeling today?</h3>
             <input 
                 type="number"  
                 placeholder="Feeling?"
                 value={feeling}
-                onChange={(event) => setFeeling(event.target.value)}
+                onChange={(event) => setFeeling(event.target.value) }
                 min="1"
                 max="5"
                 required
