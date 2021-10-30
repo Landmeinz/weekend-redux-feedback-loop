@@ -2,21 +2,27 @@ import './Understanding.css'
 
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function Understanding() {
 
     const [understanding, setUnderstanding] = useState('');
 
-
+    const dispatch = useDispatch();
+    
     const handleSubmit = (event) => {
-        console.log('CLICK next in the understanding form');
+        console.log('CLICK next in the feeling form');
         event.preventDefault();
+        dispatch({
+            type:   'ADD_UNDERSTANDING',
+            payload: understanding
+        })
         setUnderstanding('');
     }
 
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={(event) => handleSubmit(event)}>
             <h3>How well are you understanding the content?</h3>
             <input 
                 type="number"  

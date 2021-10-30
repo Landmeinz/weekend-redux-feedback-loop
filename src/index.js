@@ -10,26 +10,36 @@ import logger from 'redux-logger';
 
 // --- REDUCERS --- //
 
-const feedbackData = 
-    {
-        feeling:        '',
-        understanding:  '',
-        support:        '',
-        comments:       ''
-    };
+const feedbackData =
+{
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: ''
+};
 
-const formReducer = (state=feedbackData, action) => {
+const formReducer = (state = feedbackData, action) => {
 
-    if(action.type === 'ADD_FEELING'){
-        return {...state, feeling: action.payload}
+    if (action.type === 'ADD_FEELING') {
+        return { ...state, feeling: action.payload }
     }
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return { ...state, understanding: action.payload }
+    }
+    if (action.type === 'ADD_SUPPORT') {
+        return { ...state, support: action.payload }
+    }
+    if (action.type === 'ADD_COMMENT') {
+        return { ...state, comments: action.payload }
+    }
+
     return state;
 }
 
 const storeInstance = createStore(
     combineReducers({
         formReducer
-    }), 
+    }),
     applyMiddleware(logger)
 );
 
@@ -37,10 +47,10 @@ const storeInstance = createStore(
 
 
 ReactDOM.render(
-<Provider store={storeInstance}>
-    <App />
-</Provider>, 
-document.getElementById('root'));
+    <Provider store={storeInstance}>
+        <App />
+    </Provider>,
+    document.getElementById('root'));
 registerServiceWorker();
 
 
