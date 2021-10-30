@@ -8,6 +8,7 @@ import { useDispatch } from 'react-redux';
 function Feeling(){
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const [feeling, setFeeling] = useState('');
 
@@ -20,6 +21,8 @@ function Feeling(){
             payload: feeling
         })
         setFeeling('');
+
+        history.push('/understanding')
     }
 
 

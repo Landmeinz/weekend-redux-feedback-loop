@@ -7,9 +7,10 @@ import { useDispatch } from 'react-redux';
 
 function Support() {
 
-    const [support, setSupport] = useState('');
-
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const [support, setSupport] = useState('');
 
     const handleSubmit = (event) => {
         console.log('CLICK next in the support form');
@@ -19,6 +20,8 @@ function Support() {
             payload: support
         })
         setSupport('');
+
+        history.push('/comments')
     }
 
 

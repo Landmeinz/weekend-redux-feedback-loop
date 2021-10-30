@@ -8,10 +8,9 @@ import { useDispatch } from 'react-redux';
 import Header from '../Header/Header.jsx';
 import Feeling from '../Feeling/Feeling.jsx';
 import Understanding from '../Understanding/Understanding.jsx';
-import Support from '../Support/Support.jsx'; 
+import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
-
 
 
 
@@ -20,22 +19,32 @@ function App() {
   // const dispatch = useDispatch();
 
 
-
   // axios GET for admin page
 
 
 
   return (
-    <div className='app-container'>
+    <Router>
+      <div className='app-container'>
+        <Header />
 
-      <Header />
-      <Feeling />
-      <Understanding />
-      <Support />
-      <Comments />
-      <Review />
-
-    </div>
+        <Route path="/" exact>
+            <Feeling />
+        </Route>
+        <Route path="/understanding">
+            <Understanding />
+        </Route>
+        <Route path="/support">
+            <Support />
+        </Route>
+        <Route path="/comments">
+            <Comments />
+        </Route>
+        <Route path="/review">
+            <Review />
+        </Route>
+      </div>
+    </Router>
   );
 }
 

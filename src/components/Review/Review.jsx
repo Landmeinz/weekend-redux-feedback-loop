@@ -9,6 +9,7 @@ import { useState } from 'react';
 function Review() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const feedbackData = useSelector(store => store.formReducer);
 
@@ -32,14 +33,18 @@ function Review() {
     }
 
 
+    const handleStartOver = () => {
+        history.push('/');
+    }
+
 
     const [submitState, setSubmitState] = useState(false)
 
     
     const displaySuccess = (
         <div>
-            <h3>FEEDBACK POST SUCCESS!</h3>
-            <button>START NEW FEEDBACK FORM</button>
+            <h3>FEEDBACK RECEIVED SUCCESSFULLY!</h3>
+            <button onClick={handleStartOver}>NEW FEEDBACK FORM</button>
         </div>
     )
 
@@ -56,13 +61,12 @@ function Review() {
     )
     
 
-    console.log('this is the feedbackData:', feedbackData);
-
     return (
         <div>
             {submitState ? displaySuccess : displayReview}
         </div>
     )
 };
+
 
 export default Review;

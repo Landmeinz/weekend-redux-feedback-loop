@@ -7,9 +7,10 @@ import { useDispatch } from 'react-redux';
 
 function Comments() {
 
-    const [comment, setComment] = useState('');
-
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const [comment, setComment] = useState('');
 
     const handleSubmit = (event) => {
         console.log('CLICK next in the feeling form');
@@ -19,6 +20,8 @@ function Comments() {
             payload: comment
         })
         setComment('');
+
+        history.push('/review')
     }   
 
     return(

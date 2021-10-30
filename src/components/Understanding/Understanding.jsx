@@ -6,9 +6,10 @@ import { useDispatch } from 'react-redux';
 
 function Understanding() {
 
-    const [understanding, setUnderstanding] = useState('');
-
     const dispatch = useDispatch();
+    const history = useHistory();
+
+    const [understanding, setUnderstanding] = useState('');
     
     const handleSubmit = (event) => {
         console.log('CLICK next in the feeling form');
@@ -18,6 +19,8 @@ function Understanding() {
             payload: understanding
         })
         setUnderstanding('');
+
+        history.push('/support');
     }
 
 
