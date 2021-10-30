@@ -27,15 +27,10 @@ function App() {
     <div className='app-container'>
 
       <Header />
-
       <Feeling />
-
       <Understanding />
-
       <Support />
-
       <Comments />
-
       <Review />
 
     </div>
