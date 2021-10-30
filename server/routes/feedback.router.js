@@ -9,6 +9,27 @@ const pool = require('../modules/pool');
 // pool.query
 // .then
 // .catch
+router.get('/', (req, res) => {
+    console.log('req.body', req.body);
+    
+    const queryText = `
+        SELECT     *
+        FROM       "feedback"
+        ORDER BY   "id" DESC;` ;
+    
+
+    pool.query(queryText)
+        .then(response => {
+            console.log('router.GET response', response);
+            
+            res.send(response.rows);
+        })
+        .catch(error => {
+            console.log('router.GET /feedback ERROR', error);
+            res.sendStatus(500);
+        });
+});
+
 
 
 // POST feedback to database; 
@@ -16,7 +37,6 @@ const pool = require('../modules/pool');
 // pool.query
 // .then
 // .catch
-
 router.post('/', (req, res) => {
     console.log('req.body', req.body);
     const newFeedback = req.body;
@@ -32,7 +52,6 @@ router.post('/', (req, res) => {
     pool.query(queryText, values)
         .then(result => {
             console.log('router.POST response', response);
-            
             res.sendStatus(200);
         })
         .catch(error => {

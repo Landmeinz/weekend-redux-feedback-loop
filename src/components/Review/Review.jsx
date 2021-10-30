@@ -3,13 +3,13 @@ import './Review.css';
 
 import axios from 'axios';
 import { useHistory } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Review() {
 
-    const feedbackData = useSelector(store => store.formReducer);
+    const dispatch = useDispatch();
 
-    // const dispatch = useDispatch();
+    const feedbackData = useSelector(store => store.formReducer);
 
     const handleSubmit = () => {
         console.log('CLICK submit in the review page');
@@ -25,7 +25,12 @@ function Review() {
             console.log('POST /feedback ERROR', error);
         })
 
+        dispatch({
+            type: 'CLEAR_ALL',
+        })
     }
+
+
 
     console.log('this is the feedbackData:', feedbackData);
 

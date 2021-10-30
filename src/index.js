@@ -32,6 +32,9 @@ const formReducer = (state = feedbackData, action) => {
     if (action.type === 'ADD_COMMENT') {
         return { ...state, comments: action.payload }
     }
+    if (action.type === 'CLEAR_ALL') {
+        return feedbackData
+    }
 
     return state;
 }
