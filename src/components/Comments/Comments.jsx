@@ -25,7 +25,7 @@ function Comments() {
     }   
 
     return(
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form className="form-comments" onSubmit={(event) => handleSubmit(event)}>
             <h3>Any comment you want to leave?</h3>
             <input
                 type="text"

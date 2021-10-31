@@ -1,0 +1,12 @@
+
+
+.form-comments {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-comments input {
+    margin: 20px 0 40px 0; 
+    height: 200px;
+}

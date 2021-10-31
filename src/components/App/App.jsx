@@ -26,23 +26,25 @@ function App() {
   return (
     <Router>
       <div className='app-container'>
-        <Header />
+        <div className="content-container">
+          <Header />
 
-        <Route path="/" exact>
-            <Feeling />
-        </Route>
-        <Route path="/understanding">
-            <Understanding />
-        </Route>
-        <Route path="/support">
-            <Support />
-        </Route>
-        <Route path="/comments">
-            <Comments />
-        </Route>
-        <Route path="/review">
-            <Review />
-        </Route>
+          <Route path="/" exact>
+              <Feeling />
+          </Route>
+          <Route path="/understanding">
+              <Understanding />
+          </Route>
+          <Route path="/support">
+              <Support />
+          </Route>
+          <Route path="/comments">
+              <Comments />
+          </Route>
+          <Route path="/review">
+              <Review />
+          </Route>
+        </div>
       </div>
     </Router>
   );

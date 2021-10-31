@@ -39,6 +39,7 @@ const formReducer = (state = feedbackData, action) => {
     return state;
 }
 
+// store open 24/7;
 const storeInstance = createStore(
     combineReducers({
         formReducer

@@ -27,7 +27,7 @@ function Feeling(){
 
 
     return(
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form className="form-feeling" onSubmit={(event) => handleSubmit(event)}>
             <h3>How are you feeling today?</h3>
             <input 
                 type="number"  

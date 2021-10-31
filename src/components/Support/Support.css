@@ -1,0 +1,11 @@
+
+
+.form-support {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-support input {
+    margin: 20px 0 40px 0; 
+}

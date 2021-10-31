@@ -1,0 +1,43 @@
+
+
+.review-container {
+    display: grid;
+}
+
+
+.display-success {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.display-review {
+    display: grid;
+    align-items: center;
+}
+
+.review-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.review-info p {
+    font-size: .85rem;
+}
+
+.info-left {
+    text-align: right;
+}
+
+.info-right {
+    text-align: left;
+    margin: 0 0 0 10px;
+}
+
+.display-review h3 {
+    text-align: center;
+}
+

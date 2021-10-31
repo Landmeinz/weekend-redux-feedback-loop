@@ -1,6 +1,22 @@
 
 /* main container */
 
+:root {
+  --size-width-app: 500px;
+}
+
 .app-container {
+  /* border: 1px solid green; */
+  display: grid;
+  justify-content: center;
+  margin: 5% 0 0 0;
+}
+
+
+.content-container {
   /* border: 1px solid red; */
+  display: grid;
+  justify-content: center;
+  width: var(--size-width-app);
+  box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
 }

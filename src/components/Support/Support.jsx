@@ -26,7 +26,7 @@ function Support() {
 
 
     return (
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form className="form-support" onSubmit={(event) => handleSubmit(event)}>
             <h3>How well are you being supported?</h3>
             <input
                 type="number"

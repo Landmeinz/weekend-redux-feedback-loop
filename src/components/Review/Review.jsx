@@ -42,7 +42,7 @@ function Review() {
 
     
     const displaySuccess = (
-        <div>
+        <div className="display-success">
             <h3>FEEDBACK RECEIVED SUCCESSFULLY!</h3>
             <button onClick={handleStartOver}>NEW FEEDBACK FORM</button>
         </div>
@@ -50,19 +50,35 @@ function Review() {
 
 
     const displayReview = (
-        <div>
+        <div className="display-review">
+
             <h3>Review Your Feedback</h3>
-            <p>FEELING: {feedbackData.feeling}</p>
-            <p>UNDERSTANDING: {feedbackData.understanding}</p>
-            <p>SUPPORT: {feedbackData.support}</p>
-            <p>COMMENTS: {feedbackData.comments}</p>
-        <button onClick={handleSubmitFeedback}>SUBMIT</button>
-    </div>
+
+            <div className="review-info">
+
+                <div className="info-left">
+                    <p>FEELING: </p>
+                    <p>UNDERSTANDING: </p>
+                    <p>SUPPORT: </p>
+                    <p>COMMENTS: </p>
+                </div>
+
+                <div className="info-right">
+                    <p>{feedbackData.feeling}</p>
+                    <p>{feedbackData.understanding}</p>
+                    <p>{feedbackData.support}</p>
+                    <p>{feedbackData.comments}</p>
+                </div>
+
+            </div>
+            
+            <button onClick={handleSubmitFeedback}>SUBMIT</button>
+        </div>
     )
     
 
     return (
-        <div>
+        <div className="review-container">
             {submitState ? displaySuccess : displayReview}
         </div>
     )

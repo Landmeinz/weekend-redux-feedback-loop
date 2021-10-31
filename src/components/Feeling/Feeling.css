@@ -1,2 +1,11 @@
 
 
+.form-feeling {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-feeling input {
+    margin: 20px 0 40px 0; 
+}

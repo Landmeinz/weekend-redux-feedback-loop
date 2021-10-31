@@ -1,0 +1,11 @@
+
+
+.form-understanding {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-understanding input {
+    margin: 20px 0 40px 0; 
+}

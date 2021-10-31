@@ -25,7 +25,7 @@ function Understanding() {
 
 
     return(
-        <form onSubmit={(event) => handleSubmit(event)}>
+        <form className="form-understanding" onSubmit={(event) => handleSubmit(event)}>
             <h3>How well are you understanding the content?</h3>
             <input 
                 type="number"  
