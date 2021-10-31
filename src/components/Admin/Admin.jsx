@@ -1,6 +1,6 @@
 
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -11,7 +11,7 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
-function Admin({getFeedback}) {
+function Admin({ getFeedback }) {
 
     const feedbackList = useSelector(store => store.adminReducer);
 
@@ -19,20 +19,43 @@ function Admin({getFeedback}) {
 
     useEffect(() => {
         getFeedback();
-      }, []);
+    }, []);
+
+
+
+    const [flagStatus, setFlagStatus] = useState(false);
+    // 
+    const toggleFlag = () => {
+        console.log('toggleFlag', toggleStatus);
+        setFlagStatus(!flagStatus);
+    };
+
+
+    const [windowStatus, setWindowStatus] = useState(false)
+    // 
+    const toggleWindow = () => {
+        console.log('toggleFlag', windowStatus);
+        setWindowStatus(!windowStatus);
+    };
+
+
+
 
     return (
-
-
         <TableContainer component={Paper}>
-            <Table 
+            <Table
                 sx={{ minWidth: 450 }}
                 aria-label="simple table"
                 size="small"
             >
                 <TableHead >
-                    <TableRow >
-                        <TableCell 
+                    <TableRow style={{
+                        width: '40px',
+                        height: '30px',
+                        paddingLeft: '15px',
+                        margin: '5px'
+                    }}>
+                        <TableCell
                             align="center"
                             size="medium"
                         >Feeling</TableCell>
@@ -41,7 +64,7 @@ function Admin({getFeedback}) {
                         <TableCell align="left">Comments</TableCell>
                         <TableCell align="center">Remove</TableCell>
                         <TableCell align="center">Flag</TableCell>
-                        
+
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -49,24 +72,28 @@ function Admin({getFeedback}) {
                         <TableRow
                             key={listItem.id}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            hover="true"
+                            hover
                         >
                             <TableCell align="center">{listItem.feeling}</TableCell>
                             <TableCell align="center">{listItem.understanding}</TableCell>
                             <TableCell align="center">{listItem.support}</TableCell>
                             <TableCell align="left">{listItem.comments}</TableCell>
-                            <TableCell><Button 
-                                            variant="outlined"
-                                            size="small"
-                                            color="error"
-                                        >Delete
-                                        </Button>
+                            <TableCell>
+                                <Button
+                                    variant="outlined"
+                                    size="small"
+                                    color="error"
+                                    onClick={toggleWindow}
+                                >Delete
+                                </Button>
                             </TableCell>
-                            <TableCell><Button 
-                                            variant="contained"
-                                            size="small"
-                                        >Flag
-                                        </Button>
+                            <TableCell>
+                                <Button
+                                    variant="contained"
+                                    size="small"
+                                    onClick={toggleFlag}
+                                >Flag
+                                </Button>
                             </TableCell>
 
                         </TableRow>
