@@ -27,7 +27,7 @@
   /* border: 1px solid red; */
   display: grid;
   justify-content: center;
-  width: var(--size-width-app);
+  /* width: var(--size-width-app); */
   padding: 0 0 5% 0;
   box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
   border-radius: var(--radius-content);

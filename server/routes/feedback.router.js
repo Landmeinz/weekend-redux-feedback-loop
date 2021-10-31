@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
         FROM       "feedback"
         ORDER BY   "id" DESC;` ;
     
-
     pool.query(queryText)
         .then(response => {
             console.log('router.GET response', response);

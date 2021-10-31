@@ -10,6 +10,15 @@ import logger from 'redux-logger';
 
 // --- REDUCERS --- //
 
+const adminReducer = (state=[], action) => {
+
+    if(action.type === 'GET_FEEDBACK') {
+        return action.payload;
+    }
+    return state;
+}
+
+
 const feedbackData =
 {
     feeling: '',
@@ -42,7 +51,8 @@ const formReducer = (state = feedbackData, action) => {
 // store open 24/7;
 const storeInstance = createStore(
     combineReducers({
-        formReducer
+        formReducer,
+        adminReducer,
     }),
     applyMiddleware(logger)
 );
