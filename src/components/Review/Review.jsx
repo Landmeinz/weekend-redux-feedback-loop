@@ -31,7 +31,7 @@ function Review() {
             })
 
         dispatch({ type: 'CLEAR_ALL' });
-        
+
         setSubmitState(true);
     }
 
@@ -43,13 +43,13 @@ function Review() {
 
     const [submitState, setSubmitState] = useState(false)
 
-    
+
     const displaySuccess = (
         <div className="display-success">
-    
+
             <h3>Feedback Submitted Successfully!</h3>
 
-            <Button 
+            <Button
                 onClick={handleStartOver}
                 variant="outlined"
                 type="submit"
@@ -80,7 +80,7 @@ function Review() {
                 </div>
 
             </div>
-            <Button 
+            <Button
                 onClick={handleSubmitFeedback}
                 variant="outlined"
                 type="submit"
@@ -88,7 +88,7 @@ function Review() {
 
         </div>
     )
-    
+
 
     return (
         <div className="review-container">

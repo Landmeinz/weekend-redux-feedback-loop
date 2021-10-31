@@ -15,14 +15,14 @@ function Understanding() {
     const history = useHistory();
 
     const [understanding, setUnderstanding] = useState('');
-    
+
 
     const handleSubmit = (event) => {
-        console.log('CLICK next in the feeling form');
+        console.log('CLICK next in the understanding form');
         event.preventDefault();
-        if(understanding > 0){
+        if (understanding > 0) {
             dispatch({
-                type:   'ADD_UNDERSTANDING',
+                type: 'ADD_UNDERSTANDING',
                 payload: understanding
             })
         } else {
@@ -36,16 +36,16 @@ function Understanding() {
 
     const marks = [
         {
-          value: 1,
-          label: '1',
+            value: 1,
+            label: '1',
         },
         {
-          value: 2,
-          label: '2',
+            value: 2,
+            label: '2',
         },
         {
-          value: 3,
-          label: '3',
+            value: 3,
+            label: '3',
         },
         {
             value: 4,
@@ -55,10 +55,10 @@ function Understanding() {
             value: 5,
             label: '5',
         },
-      ];
+    ];
 
 
-    return(
+    return (
         <form className="form-understanding" onSubmit={(event) => handleSubmit(event)}>
             <h3>How well are you understanding the content?</h3>
 
@@ -67,11 +67,10 @@ function Understanding() {
                 marks={marks}
                 min={1}
                 max={5}
-                value={understanding}
                 onChange={(event) => setUnderstanding(event.target.value)}
                 required
-            />      
-            <Button 
+            />
+            <Button
                 variant="outlined"
                 type="submit"
             >NEXT</Button>

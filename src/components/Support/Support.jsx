@@ -19,15 +19,15 @@ function Support() {
     const handleSubmit = (event) => {
         console.log('CLICK next in the support form');
         event.preventDefault();
-        if(support > 0){
+        if (support > 0) {
             dispatch({
-                type:   'ADD_SUPPORT',
+                type: 'ADD_SUPPORT',
                 payload: support
             })
         } else {
             return alert('please make a selection')
         }
-      
+
         setSupport('');
 
         history.push('/comments')
@@ -36,16 +36,16 @@ function Support() {
 
     const marks = [
         {
-          value: 1,
-          label: '1',
+            value: 1,
+            label: '1',
         },
         {
-          value: 2,
-          label: '2',
+            value: 2,
+            label: '2',
         },
         {
-          value: 3,
-          label: '3',
+            value: 3,
+            label: '3',
         },
         {
             value: 4,
@@ -55,7 +55,7 @@ function Support() {
             value: 5,
             label: '5',
         },
-      ];
+    ];
 
 
     return (
@@ -67,11 +67,10 @@ function Support() {
                 marks={marks}
                 min={1}
                 max={5}
-                value={support}
                 onChange={(event) => setSupport(event.target.value)}
                 required
-            />      
-            <Button 
+            />
+            <Button
                 variant="outlined"
                 type="submit"
             >NEXT</Button>
