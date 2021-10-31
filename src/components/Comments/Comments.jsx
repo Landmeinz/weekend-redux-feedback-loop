@@ -5,6 +5,11 @@ import { useHistory } from "react-router-dom";
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 
+// MUI imports;
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
+
+
 function Comments() {
 
     const dispatch = useDispatch();
@@ -27,14 +32,21 @@ function Comments() {
     return(
         <form className="form-comments" onSubmit={(event) => handleSubmit(event)}>
             <h3>Any comment you want to leave?</h3>
-            <input
+            <TextField 
+                id="standard-basic" 
+                label="Standard" 
+                variant="standard" 
                 type="text"
                 placeholder="Any comments?"
                 value={comment}
                 onChange={(event) => setComment(event.target.value)}
                 required
             />
-            <button type="submit">NEXT</button>
+            <Button 
+                variant="outlined"
+                type="submit"
+            >NEXT</Button>
+            
         </form>
     )
 };

@@ -14,7 +14,15 @@
     justify-content: center;
     align-items: center;
     width: var(--size-width-app);
+    border-top-left-radius: var(--radius-content);
+    border-top-right-radius: var(--radius-content);
 }
+
+.app-header h1 {
+    margin: 18% 0 0 0; 
+}
+
+
 .app-header h4 {
     font-style: italic;
 }

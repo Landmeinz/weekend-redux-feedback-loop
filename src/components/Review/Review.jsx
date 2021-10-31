@@ -6,6 +6,9 @@ import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from 'react-redux';
 import { useState } from 'react';
 
+// MUI imports;
+import Button from '@mui/material/Button';
+
 function Review() {
 
     const dispatch = useDispatch();
@@ -43,8 +46,14 @@ function Review() {
     
     const displaySuccess = (
         <div className="display-success">
-            <h3>FEEDBACK RECEIVED SUCCESSFULLY!</h3>
-            <button onClick={handleStartOver}>NEW FEEDBACK FORM</button>
+    
+            <h3>Feedback Submitted Successfully!</h3>
+
+            <Button 
+                onClick={handleStartOver}
+                variant="outlined"
+                type="submit"
+            >NEW FEEDBACK FORM</Button>
         </div>
     )
 
@@ -71,8 +80,12 @@ function Review() {
                 </div>
 
             </div>
-            
-            <button onClick={handleSubmitFeedback}>SUBMIT</button>
+            <Button 
+                onClick={handleSubmitFeedback}
+                variant="outlined"
+                type="submit"
+            >SUBMIT</Button>
+
         </div>
     )
     

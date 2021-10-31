@@ -10,14 +10,40 @@
     justify-content: center;
     align-items: center;
 }
+.display-success h3 {
+    text-align: center;
+    margin: var(--margin-all-h3);
+    width: var(--size-sub-card);
+    line-height: 1.8;
+}
 
 
 
 
 .display-review {
     display: grid;
+    justify-content: center;
     align-items: center;
+    width: var(--size-sub-card);
+    margin: 0 auto 0 auto; 
+    text-align: center;
 }
+
+.display-review h3 {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: var(--margin-all-h3);
+    width: var(--size-sub-card);
+}
+
+
+.display-review button {
+    margin: var(--margin-all-buttons);
+    width: var(--size-sub-card);
+}
+
+
 
 .review-info {
     display: grid;
@@ -36,8 +62,3 @@
     text-align: left;
     margin: 0 0 0 10px;
 }
-
-.display-review h3 {
-    text-align: center;
-}
-

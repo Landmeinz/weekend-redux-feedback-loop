@@ -1,12 +1,22 @@
 
 
 .form-comments {
+    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
+    width: var(--size-sub-card);
+    margin: 0 auto 0 auto; 
+    text-align: center;
 }
 
-.form-comments input {
-    margin: 20px 0 40px 0; 
-    height: 200px;
+.form-comments h3 {
+    margin: var(--margin-all-h3);
+    width: var(--size-sub-card);
 }
+
+.form-comments button {
+    margin: var(--margin-all-buttons);
+}
+
+

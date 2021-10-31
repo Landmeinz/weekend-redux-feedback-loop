@@ -2,8 +2,17 @@
 /* main container */
 
 :root {
-  --size-width-app: 500px;
+  --size-width-app: 400px;
+  --size-sub-card:  300px;
+
+  --margin-all-h3: 15% 0 15% 0;
+  --margin-all-buttons: 10% 0 0 0; 
+
+  --radius-content: 12px;
+
 }
+
+
 
 .app-container {
   /* border: 1px solid green; */
@@ -18,5 +27,7 @@
   display: grid;
   justify-content: center;
   width: var(--size-width-app);
+  padding: 0 0 5% 0;
   box-shadow: hsla(0, 0%, 0%, 0.24) 0px 3px 8px;
+  border-radius: var(--radius-content);
 }

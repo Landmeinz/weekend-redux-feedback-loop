@@ -1,11 +1,20 @@
 
 
 .form-support {
+    /* border: 1px solid red; */
     display: grid;
     justify-content: center;
     align-items: center;
+    width: var(--size-sub-card);
+    margin: 0 auto 0 auto; 
+    text-align: center;
 }
 
-.form-support input {
-    margin: 20px 0 40px 0; 
+.form-support h3 {
+    margin: var(--margin-all-h3);
+    width: var(--size-sub-card);
+}
+
+.form-support button {
+    margin: var(--margin-all-buttons);
 }
