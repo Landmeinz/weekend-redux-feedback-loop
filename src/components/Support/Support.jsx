@@ -34,6 +34,11 @@ function Support() {
     }
 
 
+    const goBack = () => {
+        history.push('/understanding');
+    }
+
+
     const marks = [
         {
             value: 1,
@@ -71,6 +76,7 @@ function Support() {
                 required
             />
             <Button
+                onClick={goBack}
                 variant="outlined"
                 type="submit"
             >BACK</Button>

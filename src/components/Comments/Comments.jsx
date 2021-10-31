@@ -24,10 +24,15 @@ function Comments() {
             type: 'ADD_COMMENT',
             payload: comment
         })
-        setComment('');
+        // setComment('');
 
         history.push('/review')
     }
+
+    const goBack = () => {
+        history.push('/support');
+    }
+
 
     return (
         <form className="form-comments" onSubmit={(event) => handleSubmit(event)}>
@@ -42,6 +47,7 @@ function Comments() {
                 required
             />
             <Button
+                onClick={goBack}
                 variant="outlined"
                 type="submit"
             >BACK</Button>

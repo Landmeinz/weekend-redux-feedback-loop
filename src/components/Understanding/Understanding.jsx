@@ -28,9 +28,17 @@ function Understanding() {
         } else {
             return alert('please make a selection')
         }
+        
+        // setUnderstanding('')
 
         history.push('/support');
     }
+
+
+    const goBack = () => {
+        history.push('/');
+    }
+
 
     const marks = [
         {
@@ -69,6 +77,7 @@ function Understanding() {
                 required
             />
              <Button
+                onClick={goBack}
                 variant="outlined"
                 type="submit"
             >BACK</Button>
