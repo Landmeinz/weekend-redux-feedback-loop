@@ -9,6 +9,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 function Admin({getFeedback}) {
 
@@ -38,6 +39,9 @@ function Admin({getFeedback}) {
                         <TableCell align="center">Understanding</TableCell>
                         <TableCell align="center">Support</TableCell>
                         <TableCell align="left">Comments</TableCell>
+                        <TableCell align="center">Remove</TableCell>
+                        <TableCell align="center">Flag</TableCell>
+                        
                     </TableRow>
                 </TableHead>
                 <TableBody>
@@ -51,6 +55,20 @@ function Admin({getFeedback}) {
                             <TableCell align="center">{listItem.understanding}</TableCell>
                             <TableCell align="center">{listItem.support}</TableCell>
                             <TableCell align="left">{listItem.comments}</TableCell>
+                            <TableCell><Button 
+                                            variant="outlined"
+                                            size="small"
+                                            color="error"
+                                        >Delete
+                                        </Button>
+                            </TableCell>
+                            <TableCell><Button 
+                                            variant="contained"
+                                            size="small"
+                                        >Flag
+                                        </Button>
+                            </TableCell>
+
                         </TableRow>
                     ))}
                 </TableBody>
