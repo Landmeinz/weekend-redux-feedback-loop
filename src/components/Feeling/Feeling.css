@@ -13,6 +13,7 @@
 .form-feeling h3 {
     margin: var(--margin-all-h3);
     width: var(--size-sub-card);
+    color: var(--color-text-h3);
 }
 
 .form-feeling button {

@@ -14,6 +14,7 @@
     text-align: center;
     margin: var(--margin-all-h3);
     width: var(--size-sub-card);
+    color: var(--color-text-h3);
     line-height: 1.8;
 }
 
@@ -35,6 +36,7 @@
     text-align: center;
     margin: var(--margin-all-h3);
     width: var(--size-sub-card);
+    color: var(--color-text-h3);
 }
 
 

@@ -27,19 +27,23 @@ function App() {
           <Header />
 
           <Route path="/" exact>
-            <Feeling />
+              <Feeling />
           </Route>
+
           <Route path="/understanding">
-            <Understanding />
+              <Understanding />
           </Route>
+
           <Route path="/support">
-            <Support />
+              <Support />
           </Route>
+
           <Route path="/comments">
-            <Comments />
+              <Comments />
           </Route>
+          
           <Route path="/review">
-            <Review />
+              <Review />
           </Route>
         </div>
       </div>
