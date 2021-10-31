@@ -30,7 +30,7 @@ function Feeling() {
             return alert('please make a selection')
         }
 
-        setFeeling('');
+        // setFeeling('');
 
         history.push('/understanding')
     }

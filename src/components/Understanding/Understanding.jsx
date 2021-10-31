@@ -29,8 +29,6 @@ function Understanding() {
             return alert('please make a selection')
         }
 
-        setUnderstanding('');
-
         history.push('/support');
     }
 
@@ -70,6 +68,10 @@ function Understanding() {
                 onChange={(event) => setUnderstanding(event.target.value)}
                 required
             />
+             <Button
+                variant="outlined"
+                type="submit"
+            >BACK</Button>
             <Button
                 variant="outlined"
                 type="submit"

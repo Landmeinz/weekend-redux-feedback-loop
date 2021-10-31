@@ -28,7 +28,7 @@ function Support() {
             return alert('please make a selection')
         }
 
-        setSupport('');
+        // setSupport('');
 
         history.push('/comments')
     }
@@ -70,6 +70,10 @@ function Support() {
                 onChange={(event) => setSupport(event.target.value)}
                 required
             />
+            <Button
+                variant="outlined"
+                type="submit"
+            >BACK</Button>
             <Button
                 variant="outlined"
                 type="submit"

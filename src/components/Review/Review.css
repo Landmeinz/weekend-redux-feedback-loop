@@ -1,7 +1,10 @@
 
+:root {
+    --color-hover-yellow: rgba(206, 164, 50, 0.99);
+}
 
 .review-container {
-    display: grid;
+    /* border: 1px solid red; */
 }
 
 
@@ -22,6 +25,7 @@
 
 
 .display-review {
+    /* border: 1px solid green; */
     display: grid;
     justify-content: center;
     align-items: center;
@@ -40,20 +44,42 @@
 }
 
 
-.display-review button {
-    margin: var(--margin-all-buttons);
-    width: var(--size-sub-card);
+
+.edit-button-container {
+    display: grid;
+    padding: 8px 0 5px 0;
+    height: 120px;
+}
+
+.button-edit {
+    margin: 0 -10px 0px 0px ;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 4px;
+    height: 25px;
+}
+.button-edit:hover {
+    background-color: var(--color-hover-yellow);
+    color: white;
 }
 
 
 
+.display-review .button-submit {
+    margin: var(--margin-all-buttons);
+    /* width: var(--size-sub-card); */
+}
+
 .review-info {
+    /* border: 1px solid blue; */
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: var(--size-sub-card);
+    grid-template-columns: 1fr 1fr .15fr 
 }
 
 .review-info p {
-    font-size: .85rem;
+    font-size: .9rem;
 }
 
 .info-left {
@@ -62,5 +88,5 @@
 
 .info-right {
     text-align: left;
-    margin: 0 0 0 10px;
+    margin: 0 10px 0 8px;
 }

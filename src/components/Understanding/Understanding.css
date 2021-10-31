@@ -8,12 +8,19 @@
     width: var(--size-sub-card);
     margin: 0 auto 0 auto; 
     text-align: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
 }
 
 .form-understanding h3 {
     margin: var(--margin-all-h3);
     width: var(--size-sub-card);
     color: var(--color-text-h3);
+    grid-column: span 2;
+}
+
+.form-understanding .MuiSlider-root{
+    grid-column: span 2;
 }
 
 .form-understanding button {

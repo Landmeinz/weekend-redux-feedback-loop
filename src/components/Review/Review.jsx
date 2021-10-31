@@ -36,10 +36,28 @@ function Review() {
     }
 
 
+
     const handleStartOver = () => {
         history.push('/');
     }
 
+    const editFeeling = () => {
+        history.push('/')
+    }
+
+    const editUnderstanding = () => {
+        history.push('/understanding')
+    }
+
+    const editSupport = () => {
+        history.push('/support')
+    }
+
+    const editComment = () => {
+        history.push('/comments')
+    }
+
+    
 
     const [submitState, setSubmitState] = useState(false)
 
@@ -65,6 +83,8 @@ function Review() {
 
             <div className="review-info">
 
+               
+
                 <div className="info-left">
                     <p>FEELING: </p>
                     <p>UNDERSTANDING: </p>
@@ -79,8 +99,29 @@ function Review() {
                     <p>{feedbackData.comments}</p>
                 </div>
 
+                <div className="edit-button-container">
+                    <button 
+                        className="button-edit" 
+                        onClick={editFeeling}
+                    >EDIT</button>
+                    <button 
+                        className="button-edit"
+                        onClick={editUnderstanding}
+                    >EDIT</button>
+                    <button 
+                        className="button-edit"
+                        onClick={editSupport}    
+                    >EDIT</button>
+                    <button 
+                        className="button-edit"
+                        onClick={editComment}
+                    >EDIT</button>
+                </div>
+
             </div>
+
             <Button
+                className="button-submit"
                 onClick={handleSubmitFeedback}
                 variant="outlined"
                 type="submit"

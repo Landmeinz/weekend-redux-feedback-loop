@@ -44,6 +44,10 @@ function Comments() {
             <Button
                 variant="outlined"
                 type="submit"
+            >BACK</Button>
+            <Button
+                variant="outlined"
+                type="submit"
             >NEXT</Button>
 
         </form>
