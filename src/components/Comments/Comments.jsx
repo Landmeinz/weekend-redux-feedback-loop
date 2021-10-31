@@ -39,7 +39,7 @@ function Comments() {
             <h3>Any comment you want to leave?</h3>
             <TextField
                 id="standard-basic"
-                label="Standard"
+                label="Comments"
                 variant="standard"
                 type="text"
                 placeholder="Any comments?"
