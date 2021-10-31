@@ -19,7 +19,8 @@
   /* border: 1px solid green; */
   display: grid;
   justify-content: center;
-  margin: 5% 0 0 0;
+  margin: 5% auto 0 auto;
+  max-width: 800px;
 }
 
 

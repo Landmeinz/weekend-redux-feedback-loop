@@ -3,7 +3,7 @@ import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useEffect } from 'react';
+
 
 // --- COMPONENTS --- //
 import Header from '../Header/Header.jsx';
@@ -39,10 +39,6 @@ function App() {
       });
   }
 
-  useEffect(() => {
-    getFeedback();
-  }, []);
-
 
   return (
     <Router>
@@ -52,7 +48,8 @@ function App() {
 
           <div className="admin-display">
             <Route path="/admin" exact>
-              <Admin />
+              <Admin 
+                getFeedback={getFeedback}/>
             </Route>
           </div>
 
