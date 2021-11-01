@@ -4,6 +4,7 @@ import './Feeling.css'
 import { useHistory } from "react-router-dom";
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+// import { motion } from "framer-motion";
 
 // MUI imports;
 import Slider from '@mui/material/Slider';

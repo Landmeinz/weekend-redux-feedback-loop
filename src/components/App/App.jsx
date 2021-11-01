@@ -1,8 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { motion, usePresence, AnimatePresence } from "framer-motion"
+
 
 
 // --- COMPONENTS --- //
@@ -53,30 +55,36 @@ function App() {
             </Route>
           </div>
 
-          <Route path="/" exact>
-            <Header />
-            <Feeling />
-          </Route>
+            <AnimatePresence>
+              <Switch>
 
-          <Route path="/understanding">
-            <Header />
-            <Understanding />
-          </Route>
+                <Route path="/" exact>
+                  <Header />
+                  <Feeling />
+                </Route>
 
-          <Route path="/support">
-            <Header />
-            <Support />
-          </Route>
+                <Route path="/understanding">
+                  <Header />
+                  <Understanding />
+                </Route>
 
-          <Route path="/comments">
-            <Header />
-            <Comments />
-          </Route>
+                <Route path="/support">
+                  <Header />
+                  <Support />
+                </Route>
 
-          <Route path="/review">
-            <Header />
-            <Review />
-          </Route>
+                <Route path="/comments">
+                  <Header />
+                  <Comments />
+                </Route>
+
+                <Route path="/review">
+                  <Header />
+                  <Review />
+                </Route>
+
+              </Switch>
+            </AnimatePresence>
 
         </div>
 

@@ -33,6 +33,7 @@ This app is used to receive prime students daily class feedback.
 
 -- once submitted the student is notified with a success message and then presented with the option to start a new feedback from 
 
+--- there's also an admin page for the instructors to review all feedback forms submitted
 
 ## Built With
 
