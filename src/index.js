@@ -21,10 +21,10 @@ const adminReducer = (state=[], action) => {
 
 const feedbackData =
 {
-    feeling: '',
-    understanding: '',
-    support: '',
-    comments: ''
+    feeling:        '',
+    understanding:  '',
+    support:        '',
+    comments:       ''
 };
 
 const formReducer = (state = feedbackData, action) => {
