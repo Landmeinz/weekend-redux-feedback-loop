@@ -1,10 +1,8 @@
 
+# Feedback Loop
+
 <img width="565" alt="Screen Shot 2021-11-14 at 10 01 40 PM" src="https://user-images.githubusercontent.com/85810386/147123684-84fda388-857e-433a-94e0-65f202720c3b.png">
 <img width="553" alt="Screen Shot 2021-11-14 at 10 01 58 PM" src="https://user-images.githubusercontent.com/85810386/147123703-cfc0aeac-d27e-4e52-9baa-4fb3a9320ce9.png">
-
-# Project Name
-
-Feedback Loop
 
 ## Description
 
