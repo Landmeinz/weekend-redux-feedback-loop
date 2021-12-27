@@ -12,6 +12,9 @@ Duration: Weekend challenge
 
 This is an application where Prime Digital Academy students can leave feedback on their daily lessons.
 
+## Preview Live on Heroku
+https://tranquil-caverns-36613.herokuapp.com/#/
+
 ## Installation
 
 Create a SQL database named "prime_feedback"; see file data.sql 
